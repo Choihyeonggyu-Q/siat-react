@@ -47,15 +47,35 @@ import UserList from './test/UserList';
 //   </React.StrictMode>
 // );
 
-import Interlocking from './test/Interlocking';
+// import Interlocking from './test/Interlocking';
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <Interlocking/>
+//   </React.StrictMode>
+// );
+
+// import CommentList from './component/commentList';
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <CommentList />
+// );
+
+// import Counter from './state/Counter';
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <Counter />
+// );
+
+import Statesample from './state/Statesample';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Interlocking/>
-  </React.StrictMode>
+  <Statesample />
 );
-
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
