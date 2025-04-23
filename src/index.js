@@ -70,12 +70,34 @@ import UserList from './test/UserList';
 //   <Counter />
 // );
 
-import Statesample from './state/Statesample';
+// import Statesample from './state/Statesample';
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <Statesample />
+// );
+
+// import EventSample from './event/EventSample';
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <EventSample />
+// );
+
+// import LoginForm from './event/LoginForm';
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <LoginForm />
+// );
+
+// import IndexPage from './pages/IndexPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Statesample />
+  <App />
 );
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
