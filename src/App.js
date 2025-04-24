@@ -4,6 +4,7 @@ import './App.css';
 import IndexPage from "./pages/IndexPage";
 import LoginForm from "./event/LoginForm";
 import SuccessPage from "./pages/SuccessPage";
+import ViewPage from "./component/ViewComponent";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/"               element={ <IndexPage /> }></Route>
         <Route path="/user/loginForm" element={ <LoginForm /> }></Route>
         <Route path="/user/success"   element={ <SuccessPage /> }></Route>
+        <Route path="/user/success/view"   element={ <ViewPage /> }></Route>
       </Routes>
     </BrowserRouter>
   );

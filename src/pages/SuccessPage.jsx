@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import api from "../api/axios";
+import TodoItem from "../items/TodoItem";
 
 function SuccessPage(props){
     const [list, setList] = useState([]);
@@ -17,6 +18,16 @@ function SuccessPage(props){
         setList(response.data);        
     };
 
+    const deleteHandler = async (seq) => {
+        const response = await api.get(`/react/delete?seq=${seq}`);
+        if(response.status === 204){
+            // getList();
+            console.log("debug >> delete OK");
+            setList(...[list.filter(todo=>todo.seq != seq)]);
+        }
+      };
+
+    
     return (
         <div align="center">
             OOO 님 로그인 성공하셨습니다.
@@ -26,16 +37,19 @@ function SuccessPage(props){
                         <th>title</th>
                         <th>status</th>
                         <th>priority</th>
+                        <th>delete</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {list.map((item, index) =>(
-                        <tr key={index}>
-                            <td>{item.title}</td>
-                            <td>{item.status}</td>
-                            <td>{item.priority}</td>
-                        </tr>
-                    ))}
+                    {
+                        list.map((items) => {
+                            return (
+                                <TodoItem   key={items.seq}
+                                            data={items} 
+                                            handler={deleteHandler}/>
+                            )
+                        })
+                    }
                 </tbody>
             </table>
         </div>

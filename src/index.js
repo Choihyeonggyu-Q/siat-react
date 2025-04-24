@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import UserList from './test/UserList';
 
 
+
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <React.StrictMode>
@@ -92,6 +93,14 @@ import UserList from './test/UserList';
 // );
 
 // import IndexPage from './pages/IndexPage';
+
+// import LogInOutCtrl from './rendering/LogInOutCtrl';
+
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <LogInOutCtrl />
+// );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
