@@ -5,12 +5,15 @@ import Greeting from "./Greeting";
 
 function LogInOutCtrl(props){
     const [isLoggedIn, setisLoggedIn] = useState(false);
-    const loginHandler = () => {
-        setisLoggedIn(true);
-    }
-    const logoutHandler = () =>{
-        setisLoggedIn(false);
-    }
+
+    // const loginHandler = () => {
+    //     console.log("debug >> login Handler");
+    //     setisLoggedIn(true);
+    // }
+    // const logoutHandler = () =>{
+    //     console.log("debug >> logoutHandler");
+    //     setisLoggedIn(false);
+    // }
 
     let button;
 
@@ -23,8 +26,10 @@ function LogInOutCtrl(props){
     return (
         <div>
             <Greeting isLoggedIn={isLoggedIn}/>
-            {isLoggedIn ? <LogOutBtn handler={logoutHandler}/>
-                        : <LogInBtn handler={loginHandler}/>}
+            {/* {isLoggedIn ? <LogOutBtn handler={logoutHandler}/>
+                        : <LogInBtn handler={loginHandler}/>} */}
+            {isLoggedIn ? <LogOutBtn isLogin={setisLoggedIn}/>
+                        : <LogInBtn isLogin={setisLoggedIn}/>}
         </div>
     );
 }

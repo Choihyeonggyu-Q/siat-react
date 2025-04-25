@@ -7,6 +7,7 @@ import UserList from './test/UserList';
 
 
 
+
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <React.StrictMode>
@@ -96,16 +97,44 @@ import UserList from './test/UserList';
 
 // import LogInOutCtrl from './rendering/LogInOutCtrl';
 
-
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <LogInOutCtrl />
 // );
 
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <App />
+// );
+
+// import FormSample from './form/FormSample';
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <FormSample />
+// );
+
+// import Calculator from './lifting/Calculator';
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <Calculator />
+// );
+
+// import WelcomeDialog from './composition/WelcomeDialog';
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <WelcomeDialog />
+// );
+
+import ContextApp from './context/ContextApp';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <App />
+  <ContextApp />
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

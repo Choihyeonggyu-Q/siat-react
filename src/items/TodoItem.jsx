@@ -10,7 +10,7 @@ function TodoItem(props){
         const response = await api.get(`/react/read?seq=${seq}`);
         if(response.status === 200){
             moveUrl("view", {
-                state: response.data 
+                state: response.data , replace : true 
             });
         }
     }
