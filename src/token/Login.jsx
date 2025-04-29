@@ -5,17 +5,19 @@ import { useNavigate } from "react-router-dom";
 function Login(props) {
     const [email, setEmail] = useState("");
     const [passwd, setPasswd] = useState("");
-    // const moveUrl = useNavigate();
+    const moveUrl = useNavigate();
     const loginHandler = async () => {
-        const response = await api.post("api/v1/auth/login", {
-            "email"  : email,
-            "passwd" : passwd
-        });
-        console.log("debug > ", response);
+      const response = await api.post("auth/login", {
+          "email"  : email,
+          "passwd" : passwd
+      });
+      console.log("debug > ", response);
+      console.log("authorization", response.headers.get("Authorization"));
+      console.log("refreshToken", response.headers.get("Refresh-Token"));
 
-        localStorage.setItem("accessToken", response.headers.authrization);
-        localStorage.setItem("refreshToken", response.headers.refreshToken);
-        // moveUrl("/");
+      localStorage.setItem("accessToken", response.headers.get("Authorization"));
+      localStorage.setItem("refreshToken", response.headers.get("Refresh-Token"));
+      moveUrl("/success");
     }
     return(
       <div>
