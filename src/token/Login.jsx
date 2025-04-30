@@ -12,11 +12,11 @@ function Login(props) {
           "passwd" : passwd
       });
       console.log("debug > ", response);
-      console.log("authorization", response.headers.get("Authorization"));
-      console.log("refreshToken", response.headers.get("Refresh-Token"));
+      console.log("authorization", response.headers.get["Authorization"]);
+      console.log("refreshToken", response.headers.get["Refresh-Token"]);
 
-      localStorage.setItem("accessToken", response.headers.get("Authorization"));
-      localStorage.setItem("refreshToken", response.headers.get("Refresh-Token"));
+      localStorage.setItem("accessToken", response.headers.get["Authorization"]);
+      localStorage.setItem("refreshToken", response.headers.get["Refresh-Token"]);
       moveUrl("/success");
     }
     return(
